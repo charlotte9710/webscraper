@@ -6,9 +6,12 @@ on:
   # - cron: "30 6 * * *"
 
 jobs:
-  Explore-GitHub-Actions:
+  Automate-my-webscraper:
     runs-on: ubuntu-latest
     steps:
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
       - name: setup python
         uses: actions/setup-python@v2
         with:
@@ -18,9 +21,7 @@ jobs:
           python -m pip install --upgrade pip
       - name: execute py script # run file
         run: |
-          python /home/runner/work/webscraper/webscraper/scrape.py
+          python scrape.py
 
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+     
       - run: echo "🍏 This job's status is ${{ job.status }}."
