@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
          python -m pip install --upgrade pip
-   # - name: execute py script # run file
-    #   run: |
-     #   python scrape.py
+      - name: execute py script
+        run: |
+         python scrape.py
 
