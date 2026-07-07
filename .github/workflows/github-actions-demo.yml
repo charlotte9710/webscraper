@@ -1,5 +1,5 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Webscaper Automation
+run-name: Setting my scraper on a daily schedule
 on:
   [push]
  # schedule:
@@ -18,7 +18,7 @@ jobs:
           python -m pip install --upgrade pip
       - name: execute py script # run file
         run: |
-          python scrape.py
+          python /home/runner/work/webscraper/webscraper/scrape.py
 
       - name: List files in the repository
         run: |
